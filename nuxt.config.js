@@ -66,7 +66,7 @@ module.exports = {
     },
     env: {
       APIKEY: process.env.APIKEY,
-      PROJECT_ID: process.env.PROJECT_ID,
+      PROJECT_ID: "foodadvisor-945e2",
       AUTHDOMAIN: process.env.AUTHDOMAIN,
       DATABASE_URL: process.env.DATABASE_URL,
       STORAGE_BUCKET: process.env.STORAGE_BUCKET,
