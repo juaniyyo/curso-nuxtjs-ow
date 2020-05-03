@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = {
   mode: 'universal',
   /*
@@ -34,6 +35,7 @@ module.exports = {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     //'@nuxtjs/eslint-module'
+    '@nuxtjs/dotenv'
   ],
   /*
    ** Nuxt.js modules
@@ -62,9 +64,37 @@ module.exports = {
         }
       }
     },
+    env: {
+      APIKEY: process.env.APIKEY,
+      PROJECT_ID: process.env.PROJECT_ID,
+      AUTHDOMAIN: process.env.AUTHDOMAIN,
+      DATABASE_URL: process.env.DATABASE_URL,
+      STORAGE_BUCKET: process.env.STORAGE_BUCKET,
+      MESSAGEING_SENDER_ID: process.env.MESSAGEING_SENDER_ID,
+      APP_ID: process.env.APP_ID
+    },
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    async routes() {
+      let routesList = []
+      try {
+        const data = await db.collection('restaurants').get()
+        const docs = await data.docs
+        docs.map(doc => {
+          const category = '/' + doc.data().category
+          routesList.push(category)
+          const route = '/' + doc.data().category + '/' + doc.data().slug
+          routesList.push(route)
+        })
+        return routesList
+      } catch (error) {
+        console.log(error)
+        return []
+      }
+    }
   }
 }

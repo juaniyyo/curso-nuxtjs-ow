@@ -10,6 +10,9 @@
         <button class="button" @click="logout">
           Logout
         </button>
+        <nuxt-link to="admin/create" class="button is-success">
+          Crear Restaurante
+        </nuxt-link>
         <table class="table is-fullwidth is-bordered">
           <thead>
             <tr>
@@ -41,7 +44,7 @@
 import { db, firebase } from '~/plugins/firebase'
 
 export default {
-  //middleware: 'auth',
+  middleware: 'auth',
   data() {
     return {
       restaurants: []
@@ -75,7 +78,7 @@ export default {
     },
     logout() {
       firebase.auth().signOut()
-      this.$router.push('index')
+      this.$router.push('/')
     }
   }
 }

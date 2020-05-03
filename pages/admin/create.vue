@@ -160,7 +160,7 @@ export default {
     onSubmitButton() {
       const response = db.collection('restaurants').add(this.restaurant)
       response.then(() => {
-        this.$router.push('/admin')
+        this.$router.back()
       })
     }
   }

@@ -41,7 +41,7 @@ export default {
       const response = firebase.auth().signInWithEmailAndPassword(this.email, this.password)
       response.then(data => {
         console.log(data)
-        this.$router.push('admin')
+        this.$router.push('/admin')
       })
     }
   }
