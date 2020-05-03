@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d2d7f947-2d04-4441-ac6f-621260b1c459/deploy-status)](https://app.netlify.com/sites/foodadvidor-ow/deploys)
+
 # nuxt-js en OpenWebinar
 
 > aprendiendo nuxt.js
