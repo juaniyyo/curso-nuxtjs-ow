@@ -1,4 +1,4 @@
-# nuxt-js
+# nuxt-js en OpenWebinar
 
 > aprendiendo nuxt.js
 
