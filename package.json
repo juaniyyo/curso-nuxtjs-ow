@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "aprendiendo nuxt.js",
   "author": "Juan M Rube (Juanito)",
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:juaniyyo/curso-nuxtjs-ow.git"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
