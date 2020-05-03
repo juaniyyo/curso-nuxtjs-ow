@@ -127,7 +127,7 @@
 import { db } from '~/plugins/firebase'
 
 export default {
-  //middleware: 'auth',
+  middleware: 'auth',
   data() {
     return {
       restaurant: null

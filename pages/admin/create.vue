@@ -127,7 +127,7 @@
 import { db } from '~/plugins/firebase'
 
 export default {
-  //middleware: 'auth',
+  middleware: 'auth',
   data() {
     return {
       restaurant: {
@@ -160,7 +160,7 @@ export default {
     onSubmitButton() {
       const response = db.collection('restaurants').add(this.restaurant)
       response.then(() => {
-        this.$router.push('/admin')
+        this.$router.back()
       })
     }
   }

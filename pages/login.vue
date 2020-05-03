@@ -40,7 +40,6 @@ export default {
     onLogin() {
       const response = firebase.auth().signInWithEmailAndPassword(this.email, this.password)
       response.then(data => {
-        console.log(data)
         this.$router.push('admin')
       })
     }
