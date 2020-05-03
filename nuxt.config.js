@@ -64,15 +64,15 @@ module.exports = {
         }
       }
     },
-    env: {
-      APIKEY: process.env.APIKEY,
-      PPROJECT_ID: "foodadvisor-945e2",
-      AUTHDOMAIN: process.env.AUTHDOMAIN,
-      DATABASE_URL: process.env.DATABASE_URL,
-      STORAGE_BUCKET: process.env.STORAGE_BUCKET,
-      MESSAGEING_SENDER_ID: process.env.MESSAGEING_SENDER_ID,
-      APP_ID: process.env.APP_ID
-    },
+    // env: {
+    //   APIKEY: process.env.APIKEY,
+    //   PPROJECT_ID: "foodadvisor-945e2",
+    //   AUTHDOMAIN: process.env.AUTHDOMAIN,
+    //   DATABASE_URL: process.env.DATABASE_URL,
+    //   STORAGE_BUCKET: process.env.STORAGE_BUCKET,
+    //   MESSAGEING_SENDER_ID: process.env.MESSAGEING_SENDER_ID,
+    //   APP_ID: process.env.APP_ID
+    // },
     /*
      ** You can extend webpack config here
      */
